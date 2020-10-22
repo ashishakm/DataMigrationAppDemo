@@ -1,0 +1,148 @@
+﻿@model Data_Migration_App.Models.Item
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Product</h4>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label asp-for="barcode" class="control-label"></label>
+                        <input asp-for="barcode" class="form-control" value="barkod-1234" />
+                        <span asp-validation-for="barcode" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="title" class="control-label"></label>
+                        <input asp-for="title" class="form-control" value="Bebek Takımı Pamuk" />
+                        <span asp-validation-for="title" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label asp-for="productMainId" class="control-label"></label>
+                        <input asp-for="productMainId" class="form-control" value="1234BT" />
+                        <span asp-validation-for="productMainId" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="brandId" class="control-label"></label>
+                        <input asp-for="brandId" class="form-control" value="1791" />
+                        <span asp-validation-for="brandId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label asp-for="categoryId" class="control-label"></label>
+                        <input asp-for="categoryId" class="form-control" value="411" />
+                        <span asp-validation-for="categoryId" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="quantity" class="control-label"></label>
+                        <input asp-for="quantity" class="form-control" value="100" />
+                        <span asp-validation-for="quantity" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label asp-for="stockCode" class="control-label"></label>
+                        <input asp-for="stockCode" class="form-control" value="STK-345" />
+                        <span asp-validation-for="stockCode" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="dimensionalWeight" class="control-label"></label>
+                        <input asp-for="dimensionalWeight" class="form-control" value="2" />
+                        <span asp-validation-for="dimensionalWeight" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label asp-for="description" class="control-label"></label>
+                        <input asp-for="description" class="form-control" value="Ürün açıklama bilgisi" />
+                        <span asp-validation-for="description" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="currencyType" class="control-label"></label>
+                        <input asp-for="currencyType" class="form-control" value="TRY" />
+                        <span asp-validation-for="currencyType" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label asp-for="listPrice" class="control-label"></label>
+                        <input asp-for="listPrice" class="form-control" value="250.99" />
+                        <span asp-validation-for="listPrice" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="salePrice" class="control-label"></label>
+                        <input asp-for="salePrice" class="form-control" value="120.99" />
+                        <span asp-validation-for="salePrice" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label asp-for="vatRate" class="control-label"></label>
+                        <input asp-for="vatRate" class="form-control" value="18" />
+                        <span asp-validation-for="vatRate" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="cargoCompanyId" class="control-label"></label>
+                        <input asp-for="cargoCompanyId" class="form-control" value="10" />
+                        <span asp-validation-for="cargoCompanyId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label asp-for="shipmentAddressId" class="control-label"></label>
+                        <input asp-for="shipmentAddressId" class="form-control" value="0" />
+                        <span asp-validation-for="shipmentAddressId" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label asp-for="returningAddressId" class="control-label"></label>
+                        <input asp-for="returningAddressId" class="form-control" value="0" />
+                        <span asp-validation-for="returningAddressId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        @*@foreach (var item in items.)
+                        {
+                            <label asp-for="items.images" class="control-label"></label>
+                            <input asp-for="Images" class="form-control" value="https://www.sampleadress/path/folder/image_1.jpg" />
+                            <span asp-validation-for="Images" class="text-danger"></span>
+                        }*@
+                        <div class="col-sm-6">
+                            <label asp-for="attributes" class="control-label"></label>
+                            <input asp-for="attributes" class="form-control" value="338" />
+                            <span asp-validation-for="attributes" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
